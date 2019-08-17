@@ -73,6 +73,31 @@
 				"description": "Updates a message"
 			},
 			"response": []
+		},
+		{
+			"name": "DeleteMessage",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{templateApiUrl}}/simplemessage/d50399a1-bc0c-461e-8866-ced19ba7b2f6",
+					"host": [
+						"{{templateApiUrl}}"
+					],
+					"path": [
+						"simplemessage",
+						"d50399a1-bc0c-461e-8866-ced19ba7b2f6"
+					]
+				},
+				"description": "Deletes a message"
+			},
+			"response": []
 		}
 	]
 }
