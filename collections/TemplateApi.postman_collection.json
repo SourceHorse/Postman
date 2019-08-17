@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "ffb43564-fe25-478c-8cd3-d98fa5fa9ebd",
+		"name": "TemplateApi",
+		"description": "Collection for testing the template api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddSimpleMessage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Message Test\",\n\t\"body\": \"This is the message body. I should probably rename this parameter.\"\n}"
+				},
+				"url": {
+					"raw": "{{templateApiUrl}}/simplemessage",
+					"host": [
+						"{{templateApiUrl}}"
+					],
+					"path": [
+						"simplemessage"
+					]
+				},
+				"description": "Adds a simple message with parameters:\nid\ntitle\nmessage"
+			},
+			"response": []
+		},
+		{
+			"name": "GetMessage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": ""
+				},
+				"description": "Gets a message by id"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMessage",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Updated Message\",\n\t\"body\": \"This message has been updated and is no longer what it started out as.\"\n}"
+				},
+				"url": {
+					"raw": "{{templateApiUrl}}/simplemessage/d50399a1-bc0c-461e-8866-ced19ba7b2f6",
+					"host": [
+						"{{templateApiUrl}}"
+					],
+					"path": [
+						"simplemessage",
+						"d50399a1-bc0c-461e-8866-ced19ba7b2f6"
+					]
+				},
+				"description": "Updates a message"
+			},
+			"response": []
+		}
+	]
+}
