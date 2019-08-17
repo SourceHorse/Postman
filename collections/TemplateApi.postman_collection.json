@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "AddSimpleMessage",
+			"name": "AddMessage",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Message Test\",\n\t\"body\": \"This is the message body. I should probably rename this parameter.\"\n}"
+					"raw": "{\n\t\"title\": \"Message Test\",\n\t\"body\": \"This is the message body.\"\n}"
 				},
 				"url": {
 					"raw": "{{templateApiUrl}}/simplemessage",
